@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Sparkles } from "lucide-react"
+import Image from "next/image"
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -19,6 +20,17 @@ export default function Hero() {
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
+        {/* Background Image */}
+        <Image
+          src="/banner.jpg"
+          alt="Banner"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay with gradient for better text readability and smooth transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#121113]" />
+        
         <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
             {/* Badge */}
@@ -41,7 +53,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-8"
             >
-              <h1 id="main-title" className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              <h1 id="main-title" className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
                 Faça sua <strong>festa</strong> <span>&</span> <br />
                 <strong>evento</strong> <em className="italic">acontecer</em>
               </h1>
@@ -52,7 +64,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
+              className="mx-auto mb-12 max-w-2xl text-lg text-white"
+              style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
             >
               Quer fazer uma festa? Ligue para a Forseti. Criamos eventos únicos e memoráveis que transformam seus momentos especiais em experiências inesquecíveis.
             </motion.p>
