@@ -11,7 +11,6 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: false,
-  swcMinify: true,
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },

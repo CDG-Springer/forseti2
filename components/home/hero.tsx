@@ -9,10 +9,16 @@ export default function Hero() {
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
         {/* Background Image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/banner2.png"
-          alt="Banner"
+          src="/banner2.webp"
+          alt="Infraestrutura Forseti para eventos em São Paulo"
           className="absolute inset-0 w-full h-full object-cover z-0"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width={1280}
+          height={719}
         />
         {/* Overlay with gradient for better text readability and smooth transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#121113]" />

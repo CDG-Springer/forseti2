@@ -88,6 +88,7 @@ export default function Home() {
 
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
           <a
+            href="#features"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -125,6 +126,7 @@ export default function Home() {
             <span className="relative z-20">Hub de Inteligência</span>
           </a>
           <a
+            href="#testimonials"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -144,6 +146,7 @@ export default function Home() {
             <span className="relative z-20">Depoimentos</span>
           </a>
           <a
+            href="#faq"
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()

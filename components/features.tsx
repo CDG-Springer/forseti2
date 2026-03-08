@@ -66,9 +66,13 @@ export default function Features() {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/maripora/maripora.png"
+                      src="/maripora/maripora.webp"
                       alt="Festival de aniversário de Mariporã 2025"
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      width={1200}
+                      height={1597}
                     />
                   </div>
                 </div>

@@ -88,6 +88,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`dark ${playfair.variable}`}>
       <head>
+        {/* Preload LCP Image */}
+        <link rel="preload" as="image" href="/banner2.webp" type="image/webp" fetchPriority="high" />
+        {/* Preconnect to critical third-party origins */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Favicon */}
         <link rel="icon" href="/forseti logo.jpg" type="image/jpeg" />
         {/* Google Tag Manager */}
