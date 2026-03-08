@@ -40,9 +40,8 @@ export default function Hero() {
               className="mb-8 hidden"
             >
               <h1 id="main-title" className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                Infraestrutura profissional para{" "}
-                <strong>eventos</strong> em{" "}
-                <em className="italic">São Paulo</em>
+                Locação de Infraestrutura:{" "}
+                <strong>Tendas, Palcos e Starlink</strong> em São Paulo
               </h1>
             </motion.div>
 
@@ -86,41 +85,48 @@ export default function Hero() {
 
               {/* Get started button */}
               <div className="flex items-center justify-center">
-                <a href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer">
-                  <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
-                    <div className="border border-border bg-black h-[40px] rounded-full flex items-center justify-center text-white">
-                      <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base text-white">
+                <a
+                  href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20r%C3%A1pido!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== "undefined" && (window as any).dataLayer) {
+                      (window as any).dataLayer.push({ event: "whatsapp_click", button_location: "hero_section" })
+                    }
+                  }}
+                >
+                  <div className="group cursor-pointer border border-[#25D366] bg-[#25D366]/10 gap-2 h-[60px] flex items-center p-[10px] rounded-full hover:bg-[#25D366]/20 transition-colors">
+                    <div className="border border-[#25D366] bg-[#25D366] h-[40px] rounded-full flex items-center justify-center text-white">
+                      <p className="font-semibold tracking-wide mr-3 ml-3 flex items-center gap-2 justify-center text-base text-white">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="18"
-                          height="18"
+                          width="24"
+                          height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          stroke="white"
+                          stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className="lucide lucide-globe animate-spin"
+                          className="lucide lucide-message-circle"
                         >
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                          <path d="M2 12h20"></path>
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
                         </svg>
-                        Solicitar Orçamento
+                        Orçamento Rápido
                       </p>
                     </div>
-                    <div className="text-muted-foreground group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-border">
+                    <div className="text-white group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-transparent">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
+                        width="18"
+                        height="18"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="lucide lucide-arrow-right group-hover:rotate-180 ease-in-out transition-all"
+                        className="lucide lucide-arrow-right group-hover:rotate-180 ease-in-out transition-transform"
                       >
                         <path d="M5 12h14"></path>
                         <path d="m12 5 7 7-7 7"></path>

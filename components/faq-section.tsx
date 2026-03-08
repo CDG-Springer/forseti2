@@ -146,13 +146,18 @@ export function FAQSection() {
             Tem outra dúvida? Fale diretamente com nossa equipe.
           </p>
           <a
-            href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20infraestrutura%20para%20eventos."
+            href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20r%C3%A1pido!"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all hover:scale-105"
-            style={{ backgroundColor: "#2BAB77", color: "#121113" }}
+            onClick={() => {
+              if (typeof window !== "undefined" && (window as any).dataLayer) {
+                (window as any).dataLayer.push({ event: "whatsapp_click", button_location: "faq_section" })
+              }
+            }}
+            className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold shadow-lg transition-all hover:scale-105"
+            style={{ backgroundColor: "#25D366", color: "#ffffff" }}
           >
-            💬 Falar no WhatsApp
+            Orçamento Rápido
           </a>
         </motion.div>
       </div>

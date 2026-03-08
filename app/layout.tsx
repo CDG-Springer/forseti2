@@ -2,7 +2,14 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import { Playfair_Display } from "next/font/google"
 import { JsonLdSchema } from "@/components/json-ld-schema"
+import { WhatsappStickyButton } from "@/components/whatsapp-sticky-button"
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+})
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -79,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR" className={`dark ${playfair.variable}`}>
       <head>
         {/* Favicon */}
         <link rel="icon" href="/forseti logo.jpg" type="image/jpeg" />
@@ -94,6 +101,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRT5N3L4KJ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VRT5N3L4KJ');
+            `,
+          }}
+        />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
@@ -115,6 +135,7 @@ html {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <WhatsappStickyButton />
       </body>
     </html>
   )

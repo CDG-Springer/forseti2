@@ -70,9 +70,23 @@ export function StickyFooter() {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento."
+                    href="/artigo"
+                    className="hover:underline cursor-pointer transition-colors block"
+                    style={{ color: "#121113" }}
+                  >
+                    Nossos Artigos
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/5514981899371?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20r%C3%A1pido!"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof window !== "undefined" && (window as any).dataLayer) {
+                        (window as any).dataLayer.push({ event: "whatsapp_click", button_location: "footer_link" })
+                      }
+                    }}
                     className="hover:underline cursor-pointer transition-colors block"
                     style={{ color: "#121113" }}
                   >

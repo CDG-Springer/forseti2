@@ -19,8 +19,10 @@ export function JsonLdSchema() {
                 "paymentAccepted": "Dinheiro, Cartão de Crédito, Cartão de Débito, PIX",
                 "address": {
                     "@type": "PostalAddress",
+                    "streetAddress": "R. Cananga, 80 - Jardim Eliane",
                     "addressLocality": "São Paulo",
                     "addressRegion": "SP",
+                    "postalCode": "03577-110",
                     "addressCountry": "BR",
                 },
                 "geo": {
