@@ -81,6 +81,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/forseti logo.jpg" type="image/jpeg" />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
